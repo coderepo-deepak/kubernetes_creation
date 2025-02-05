@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "ds-test-app-tf-bucket"
+    bucket = "deepaks-test"
     key    = "backend/ToDo-App.tfstate"
-    region = "us-east-1"
+    region = "us-west-2"
     #dynamodb_table = "dynamoDB-terra"
   }
 }
