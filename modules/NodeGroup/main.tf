@@ -21,13 +21,13 @@ resource "aws_eks_node_group" "node_group" {
   # Configuration block
   scaling_config {
     # Required number of worker nodes
-    desired_size = 3
+    desired_size = 2
 
     # Maximum number of worker nodes
-    max_size = 3
+    max_size = 2
 
     # Minimum number of worker nodes
-    min_size = 3
+    min_size = 2
   }
 
   # Type of Amazon Machine Image (AMI) associated with the EKS Node Group
