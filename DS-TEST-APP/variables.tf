@@ -8,3 +8,4 @@ variable "PRI_SUB4_CIDR" {}
 variable "EKS_CLUSTER_ENDPOINT" {}
 
 #
+#
