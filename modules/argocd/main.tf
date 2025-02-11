@@ -6,13 +6,13 @@ provider "kubernetes" {
 
 provider "helm" {
   kubernetes {
-    host                   = var.EKS_CLUSTER_ENDPOINT
-    token                  = data.aws_eks_cluster_auth.main.token
-    cluster_ca_certificate = base64decode(${var.EKS_CLUSTER_NAME}.certificate_authority[0].data)
+    host                   = data.aws_eks_cluster_auth.eks_cluster.endpoint
+    token                  = data.aws_eks_cluster_auth.eks_cluster.token
+    cluster_ca_certificate = base64decode(data.aws_eks_cluster_auth.eks_cluste.certificate_authority[0].data)
   }
 }
 
-data "aws_eks_cluster_auth" "main" {
+data "aws_eks_cluster_auth" "eks_cluster" {
   name = var.EKS_CLUSTER_NAME
 }
 
