@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+    }
+  }
+}
+
 provider "kubernetes" {
   host                   = var.EKS_CLUSTER_ENDPOINT
   token                  = data.aws_eks_cluster_auth.main.token
