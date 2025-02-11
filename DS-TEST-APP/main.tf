@@ -51,5 +51,5 @@ module "NodeGroup" {
 module "ArgoCD" {
   source               = "../modules/argocd"
   EKS_CLUSTER_NAME     = module.EKS.EKS_CLUSTER_NAME
-  EKS_CLUSTER_ENDPOINT     = module.EKS_CLUSTER_ENDPOINT
+  #EKS_CLUSTER_ENDPOINT     = module.EKS_CLUSTER_ENDPOINT
 }
