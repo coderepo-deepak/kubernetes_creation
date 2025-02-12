@@ -46,10 +46,3 @@ module "NodeGroup" {
   PRI_SUB4_ID          = module.VPC.PRI_SUB4_ID
   EKS_CLUSTER_NAME     = module.EKS.EKS_CLUSTER_NAME
 }
-
-# create ArgoCD
-module "ArgoCD" {
-  source               = "../modules/argocd"
-  EKS_CLUSTER_NAME     = module.EKS.EKS_CLUSTER_NAME
-  #EKS_CLUSTER_ENDPOINT     = module.EKS_CLUSTER_ENDPOINT
-}
